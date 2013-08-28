@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Show and Tell</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<script type="text/javascript" src="/js/jquery.min.js"></script>
+		<script type="text/javascript" src="/js/bootstrap.min.js"></script>
+		<script src="https://cdn.goinstant.net/v1/platform.min.js"></script>
+		<script type="text/javascript" src="/js/app.js"></script>
+		<link rel="stylesheet" href="/css/bootstrap.min.css">
+		<link rel="stylesheet" href="/css/app.css">
+		<link href='http://fonts.googleapis.com/css?family=Rancho' rel='stylesheet' type='text/css'>
+		<style type="text/css">
+			.fileupload_button {
+				position: relative;
+				overflow: hidden;
+			}
+			.fileupload_button input {	
+				position: absolute;
+				top: 0;
+				right: 0;
+				margin: 0;
+				opacity: 0;
+				filter: alpha(opacity=0);
+				transform: translate(-300px, 0) scale(4);
+				font-size: 33px; /* This bit here is to size the button for IE */
+				direction: ltr;
+				cursor: pointer;
+			}
+		</style>
+	</head>
+	<body>
+		<!--		<button class="btn btn-primary fileupload_button"><i class="icon-white icon-upload"></i> Upload File<input type="file" name="files[]" /></button>
+		<div id="fileupload_progress" class="progress progress-striped active" style="display: none;">
+			<div class="bar" style="width: 40%;"></div>
+		</div -->
+		<h1>Show &AMP; Tell</h1>
+		<div id="centerpane">
+			<iframe id="shareframe" allowfullscreen></iframe>
+			<div id="sharelist"></div>
+			<input type="text" id="shareurl" placeholder="Enter a YouTube video id here." />
+			<button id="submiturl" class="btn btn-success" onclick="return submiturl();">Submit Url <i class="icon-chevron-right icon-white"></i></button>
+			<div id="activesharespane"></div>
+		</div>
+		<div id="bottompane">
+			<ul class="nav nav-tabs">
+				<li class="active">
+					<a href="#" onclick="return toggleBottomPane();"><i class="icon-bullhorn"></i> Chat</a>
+				</li>
+			</ul>
+			<div>
+				<div id="chatwindow"></div>
+				<input id="chatmessage" type="text" placeholder="Type your message here.">
+				<button id="sendmessage" class="btn btn-success" onclick="return sendchatmessage();">Send Message <i class="icon-chevron-right icon-white"></i></button>
+			</div>
+		</div>
+	</body>
+</html>

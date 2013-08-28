@@ -1,0 +1,216 @@
+/* 
+    Document   : app
+    Created on : 24-Aug-2013, 12:52:39 PM
+    Author     : Tim
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+/****** CHAT STYLES ************************/
+#bottompane {
+	position: fixed;
+	height: 250px;
+	bottom: 0;
+	left: 0; right: 0;
+}
+#bottompane > div {
+	background-color: #FFF;
+	position: absolute;
+	bottom: 0; top: 38px;
+	left: 0; right: 0;
+}
+#bottompane > .nav-tabs > li {
+	float: right;
+}
+#bottompane #chatmessage {
+	display: block;
+	width: auto;
+	width: calc(100% - 182px); /* Auto was not good enough for firefox :( */
+	position: absolute;
+	left: 10px; right: 158px;
+	bottom: 0;
+	background: #FAFAFA;
+}
+#bottompane #sendmessage {
+	position: absolute;
+	right: 10px;
+	bottom: 10px;
+}
+#bottompane #chatwindow {
+	position: absolute;
+	top: 12px; bottom: 50px;
+	left: 10px; right: 10px;
+	border-radius: 4px;
+	border: 1px solid #CCC;
+	background: #FAFAFA;
+	overflow: hidden;
+	overflow-y: scroll;
+}
+#bottompane #chatwindow > div {
+	line-height: 20px;
+	vertical-align: middle;
+/*	clear: left;*/
+	display: block;
+	position: relative;
+}
+#bottompane #chatwindow > div > span.chattext {
+	text-indent: 22px;
+	display: inline-block;
+	margin: 6px;
+/*	float: left;*/
+	word-wrap: break-word;
+	word-break: break-all;
+}
+#bottompane #chatwindow > div > span.chatuser {
+	display: inline-block;
+	height: 16px;
+	width:  16px;
+	margin: 0;
+	position: absolute;
+	top: 8px;
+	left: 6px;
+}
+
+/************* GoInstant overrides *************/
+body div.goinstant-userlist.goinstant-override {
+	top: 0;
+	left: 200px;
+	background-color: #FFF;
+	padding: 0;
+	border-left: 1px solid #CCC;
+	border-right: 1px solid #CCC;
+	border-bottom: 1px solid #CCC;
+	border-bottom-left-radius: 4px;
+	border-bottom-right-radius: 4px;
+}
+body div.goinstant-userlist.goinstant-override ul.goinstant-inner {
+	background: transparent;
+	height: 32px;
+}
+body div.goinstant-userlist.goinstant-override li.goinstant-user {
+	width: auto;
+	display: inline-block;
+	background: #FFF;
+	border-right: 1px dashed #EEE;
+}
+body div.goinstant-userlist.goinstant-override ul.goinstant-inner li:first-child {
+	border-bottom-left-radius: 4px;
+}
+body div.goinstant-userlist.goinstant-override ul.goinstant-inner li:last-child {
+	border-bottom-right-radius: 4px;
+	border-right: none;
+}
+body div.goinstant-userlist.goinstant-override .goinstant-name { 
+	width: 38px;
+	text-overflow: ellipsis;
+	padding: 0 5px;
+}
+body div.goinstant-userlist.goinstant-override .goinstant-name input { 
+	padding: 0;
+	border: none;
+}
+body div.goinstant-userlist.goinstant-override div.goinstant-collapse {
+	display: none;
+}
+
+
+body div.goinstant-indicator div.goinstant-user:after {
+	content: " is typing...";
+}
+body div.goinstant-indicator div.goinstant-user {
+	width: auto;
+	padding-left: 10px;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	right: auto;
+}
+body div.goinstant-indicator div.goinstant-bar {
+	display: none;
+}
+
+/********** Share Styles *******************/
+#centerpane {
+	position: fixed;
+	top: 65px; bottom: 250px;
+	left: 0; right: 0px;
+	z-index: 1;
+}
+
+#shareframe {
+	position: absolute;
+	top: 0;
+	left: 50px;
+	height: calc(100% - 50px);
+	width: calc(70% - 60px);
+	background-color: #FFF;
+	border: 1px solid #CCC;
+	border-radius: 4px;
+}
+
+#shareurl {
+	position: absolute;
+	left: 50px;
+	bottom: 0px;
+	width: calc(70% - 190px);
+}
+
+#submiturl {
+	position: absolute;
+	right: calc(30% + 10px);
+	bottom: 10px;
+}
+
+#activesharespane {
+	position: absolute;
+	right: 10px;
+	top: 0;
+	left: 70%;
+	bottom: 10px;
+	background-color: #FFF;
+	border: 1px solid #CCC;
+	border-radius: 4px;
+	overflow: hidden;
+	overflow-y: scroll;
+}
+
+#activesharespane > div {
+	position: relative;
+	padding: 10px;
+}
+#activesharespane > div > img {
+	min-width: 99px;
+	width: calc(84.3% - 20px);
+	max-width: calc(100% - 60px);
+	min-height: 60px;
+	border: 5px solid;
+	border-radius: 4px;
+}
+#activesharespane > div > button {
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	min-height: 30px;
+	height: 31.9%;
+	min-width: 40px;
+	width: 15.7%;
+}
+#activesharespane > div > button > span.badge {
+	position: absolute;
+	top: calc(100% + 10px);
+	left: calc(50% - 12.5px);
+}
+
+/********** Site *********************/
+body {
+	background-color: #FFCF88;
+}
+body h1 {
+	font-family: 'Rancho', cursive;
+	color: white;
+	text-indent: 38px;
+	font-weight: normal;
+	-webkit-font-smoothing: antialiased;
+	text-shadow: rgba(0, 0, 0, 0.247059) 0px -1px 0px;
+/*	text-shadow: 1px 1px 0px rgba(255, 181, 70, 1);*/
+}
